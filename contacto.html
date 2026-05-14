@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto | Malva Mediación</title>
+  <meta name="description" content="Solicita información sin compromiso. Contacta con Malva Mediación por WhatsApp, teléfono o email."/>
+  <link rel="icon" type="image/png" href="assets/logo_malva.png"/>
+
+  <style>
+    @font-face{font-family:'Geist';src:url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+    @font-face{font-family:'Geist';src:url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}
+    @font-face{font-family:'Geist';src:url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+    :root{
+      --red:#BB2423;
+      --dark:#1a1a1a;
+      --gray:#f5f5f5;
+      --text:#222;
+      --muted:#666;
+      --border:#e5e5e5;
+      --white:#fff;
+      --max-w:1100px;
+      --rad:20px;
+    }
+
+    html{scroll-behavior:smooth}
+    body{font-family:'Geist',system-ui,sans-serif;background:#fff;color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;height:auto}
+
+    nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+
+    .nav-inner{
+      max-width:var(--max-w);
+      margin:0 auto;
+      padding:10px 28px;
+      min-height:150px;
+      display:flex;
+      align-items:center;
+      gap:28px;
+    }
+
+    .nav-logo{flex-shrink:0;display:flex;align-items:center}
+    .nav-logo img{height:140px;width:auto;max-width:340px;object-fit:contain;display:block}
+
+    .nav-links{display:flex;gap:2px;flex:1;align-items:center}
+    .nav-links a{font-size:.9rem;font-weight:500;color:var(--muted);padding:7px 14px;border-radius:8px;transition:color .15s,background .15s;white-space:nowrap}
+    .nav-links a:hover,.nav-links a.active{color:var(--text);background:var(--gray)}
+
+    .nav-cta{display:flex;align-items:center;gap:10px;flex-shrink:0}
+    .btn-ol{font-size:.85rem;font-weight:600;padding:8px 18px;border-radius:50px;border:1.5px solid var(--border);color:var(--text);transition:border-color .15s,background .15s;white-space:nowrap}
+    .btn-ol:hover{border-color:#bbb;background:var(--gray)}
+    .btn-dk{font-size:.85rem;font-weight:600;padding:9px 20px;border-radius:50px;background:var(--dark);color:#fff;transition:opacity .15s,transform .15s;white-space:nowrap}
+    .btn-dk:hover{opacity:.85;transform:translateY(-1px)}
+
+    .contact-hero{background:var(--gray);padding:70px 28px}
+    .contact-cards{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .contact-card{background:#fff;border:1.5px solid var(--border);border-radius:var(--rad);padding:38px 28px;text-align:center;transition:box-shadow .2s,transform .2s,border-color .2s}
+    .contact-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.07);border-color:#ccc}
+    .contact-card h3{font-size:1.1rem;font-weight:700;margin-bottom:22px;color:var(--dark)}
+    .contact-card a{font-size:1rem;color:var(--text);text-decoration:underline;text-underline-offset:4px;word-break:break-word}
+
+    .form-sec{max-width:var(--max-w);margin:0 auto;padding:80px 28px}
+    .form-head{text-align:center;margin-bottom:48px}
+    .form-head h1{font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;color:var(--dark);letter-spacing:-.025em;margin-bottom:18px;line-height:1.15}
+    .form-head p{font-size:.96rem;color:var(--muted);line-height:1.7}
+
+    form{display:grid;grid-template-columns:1fr 1.5fr;gap:28px}
+    .left-fields{display:flex;flex-direction:column;gap:18px}
+    .field label{display:block;font-size:.92rem;font-weight:600;margin-bottom:8px;color:var(--dark)}
+    input,textarea{width:100%;border:1.5px solid var(--border);border-radius:12px;padding:14px 16px;font-family:inherit;font-size:.95rem;outline:none;transition:border-color .15s,box-shadow .15s;background:#fff}
+    input{height:54px}
+    textarea{height:100%;min-height:324px;resize:vertical}
+    input:focus,textarea:focus{border-color:var(--red);box-shadow:0 0 0 4px rgba(187,36,35,.08)}
+
+    .submit-wrap{grid-column:1/-1;margin-top:18px}
+    button{width:100%;border:none;border-radius:50px;background:var(--dark);color:#fff;font-family:inherit;font-size:.95rem;font-weight:600;padding:15px 24px;cursor:pointer;transition:opacity .15s,transform .15s}
+    button:hover{opacity:.88;transform:translateY(-1px)}
+
+    footer{border-top:1px solid var(--border);padding:32px 28px}
+    .ft-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+    .ft-logo img{height:140px;width:auto;max-width:340px;object-fit:contain;opacity:1;display:block}
+    .ft-copy{font-size:.8rem;color:var(--muted)}
+    .ft-links{display:flex;gap:20px}
+    .ft-links a{font-size:.8rem;color:var(--muted);transition:color .15s}
+    .ft-links a:hover{color:var(--text)}
+
+    .wa-float{position:fixed;bottom:24px;right:24px;width:52px;height:52px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.2);z-index:200;transition:transform .2s}
+    .wa-float:hover{transform:scale(1.08)}
+    .wa-float svg{width:28px;height:28px;fill:#fff}
+
+    @media(max-width:980px){
+      .nav-inner{flex-wrap:wrap;justify-content:center;gap:14px;height:auto;padding:12px 22px}
+      .nav-logo{width:100%;justify-content:center}
+      .nav-logo img{height:160px;max-width:380px}
+      .nav-links{width:100%;justify-content:center;flex-wrap:wrap;gap:6px}
+      .nav-cta{width:100%;justify-content:center;flex-wrap:wrap}
+      .contact-cards{grid-template-columns:1fr 1fr}
+      form{grid-template-columns:1fr}
+      textarea{min-height:240px}
+    }
+
+    @media(max-width:640px){
+      .nav-inner{padding:14px 16px;gap:12px}
+      .nav-logo img{height:170px;max-width:400px}
+      .nav-links{display:flex;gap:6px;flex-wrap:wrap}
+      .nav-links a{font-size:.82rem;padding:6px 10px}
+      .nav-cta{gap:8px}
+      .btn-ol,.btn-dk{font-size:.8rem;padding:8px 14px}
+
+      .contact-hero{padding:50px 16px}
+      .contact-cards{grid-template-columns:1fr}
+      .contact-card{padding:32px 22px}
+
+      .form-sec{padding:60px 16px}
+      .form-head{margin-bottom:36px}
+      .form-head h1{font-size:2rem}
+      form{gap:22px}
+      textarea{min-height:220px}
+      .submit-wrap{margin-top:8px}
+
+      footer{padding-left:16px;padding-right:16px}
+      .ft-inner{flex-direction:column;text-align:center;align-items:center}
+      .ft-logo img{height:160px;max-width:380px}
+      .ft-links{flex-direction:column;gap:8px}
+
+      .wa-float{width:48px;height:48px;right:16px;bottom:16px}
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><img src="assets/logo_malva.png" alt="Malva Mediación"/></a>
+
+    <div class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="seguros.html">Seguros</a>
+      <a href="comunidades.html">Comunidades</a>
+      <a href="energia.html">Energía</a>
+      <a href="contacto.html" class="active">Contacto</a>
+    </div>
+
+    <div class="nav-cta">
+      <a class="btn-ol" href="tel:+34621347352">621 347 352</a>
+      <a class="btn-dk" href="contacto.html">Consulta gratuita →</a>
+    </div>
+  </div>
+</nav>
+
+<section class="contact-hero">
+  <div class="contact-cards">
+    <div class="contact-card">
+      <h3>Whatsapp</h3>
+      <a href="https://api.whatsapp.com/send?phone=34621347352" target="_blank" rel="noopener">+34 621 347 352</a>
+    </div>
+
+    <div class="contact-card">
+      <h3>Llámanos</h3>
+      <a href="tel:+34621347352">+34 621 347 352</a>
+    </div>
+
+    <div class="contact-card">
+      <h3>Escríbenos</h3>
+      <a href="mailto:f@malvamediacion.com">f@malvamediacion.com</a>
+    </div>
+  </div>
+</section>
+
+<section class="form-sec">
+  <div class="form-head">
+    <h1>Solicita información sin compromiso.</h1>
+    <p>
+      Te asesoraremos de forma personalizada y te ayudaremos a encontrar la mejor solución para tus necesidades.<br>
+      ¡Estaremos encantados de atenderte!
+    </p>
+  </div>
+
+  <form action="https://formsubmit.co/f@malvamediacion.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="Nuevo contacto web - Malva Mediación">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://malvamediacion.github.io/gracias.html">
+
+    <div class="left-fields">
+      <div class="field">
+        <label for="nombre">Nombre *</label>
+        <input type="text" id="nombre" name="Nombre" required>
+      </div>
+
+      <div class="field">
+        <label for="telefono">Teléfono *</label>
+        <input type="tel" id="telefono" name="Teléfono" required>
+      </div>
+
+      <div class="field">
+        <label for="horario">¿Cuándo te llamamos?</label>
+        <input type="text" id="horario" name="Horario preferido">
+      </div>
+
+      <div class="field">
+        <label for="asunto">Asunto *</label>
+        <input type="text" id="asunto" name="Asunto" required>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="mensaje">Déjanos tu mensaje</label>
+      <textarea id="mensaje" name="Mensaje"></textarea>
+    </div>
+
+    <div class="submit-wrap">
+      <button type="submit">Enviar</button>
+    </div>
+  </form>
+</section>
+
+<footer>
+  <div class="ft-inner">
+    <div class="ft-logo">
+      <img src="assets/logo_malva.png" alt="Malva Mediación"/>
+    </div>
+
+    <p class="ft-copy">© 2025 MALVA MEDIACIÓN CORREDURÍA DE SEGUROS SL</p>
+
+    <div class="ft-links">
+      <a href="privacidad.html">Aviso legal</a>
+      <a href="privacidad.html">Política de privacidad</a>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://api.whatsapp.com/send?phone=34621347352" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+  </svg>
+</a>
+
+</body>
+</html>
