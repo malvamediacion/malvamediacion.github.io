@@ -6,110 +6,121 @@
   <title>Aviso Legal y Política de Privacidad | Malva Mediación</title>
   <meta name="description" content="Aviso legal y política de privacidad de Malva Mediación. Información sobre el tratamiento de datos personales y cookies."/>
   <link rel="icon" type="image/png" href="assets/logo_malva.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
   <style>
-    @font-face{font-family:'Geist';src:url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
-    @font-face{font-family:'Geist';src:url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
-    @font-face{font-family:'Geist';src:url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}
-    @font-face{font-family:'Geist';src:url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-
-    :root{
-      --red:#BB2423;
-      --dark:#1a1a1a;
-      --gray:#f5f5f5;
-      --text:#222;
-      --muted:#666;
-      --border:#e5e5e5;
-      --white:#fff;
-      --max-w:1100px;
-      --rad:20px;
-      --rad-sm:10px;
+    :root {
+      --accent:       #6B4F7A;
+      --accent-light: #f3eef7;
+      --dark:         #141414;
+      --dark2:        #2c2c2c;
+      --gray:         #f7f6f8;
+      --text:         #1a1a1a;
+      --muted:        #6b6b6b;
+      --border:       #e6e0ec;
+      --white:        #ffffff;
+      --max-w:        1100px;
+      --rad:          16px;
     }
 
-    html{scroll-behavior:smooth}
-    body{font-family:'Geist',system-ui,sans-serif;background:var(--white);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
-    a{text-decoration:none;color:inherit}
-    img{max-width:100%;height:auto}
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: var(--white); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; }
 
-    nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.93); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 32px; height: 130px; display: flex; align-items: center; gap: 32px; }
+    .nav-logo { flex-shrink: 0; display: flex; align-items: center; }
+    .nav-logo img { height: 114px; width: auto; max-width: 300px; object-fit: contain; display: block; }
+    .nav-links { display: flex; gap: 2px; flex: 1; align-items: center; }
+    .nav-links a { font-size: .875rem; font-weight: 500; color: var(--muted); padding: 6px 14px; border-radius: 8px; transition: color .15s, background .15s; white-space: nowrap; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); background: var(--gray); }
+    .nav-cta { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .btn-ol { font-size: .84rem; font-weight: 500; padding: 8px 18px; border-radius: 50px; border: 1.5px solid var(--border); color: var(--muted); transition: border-color .2s, color .2s, background .2s; white-space: nowrap; }
+    .btn-ol:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-light); }
+    .btn-dk { font-size: .84rem; font-weight: 600; padding: 9px 22px; border-radius: 50px; background: var(--dark); color: var(--white); transition: transform .2s, box-shadow .2s; white-space: nowrap; }
+    .btn-dk:hover { background: var(--dark2); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,.16); }
 
-    .nav-inner{
-      max-width:var(--max-w);
-      margin:0 auto;
-      padding:10px 28px;
-      min-height:150px;
-      display:flex;
-      align-items:center;
-      gap:28px;
+    .legal-wrap { background: var(--gray); padding: 48px 32px 96px; }
+    .legal-inner { max-width: var(--max-w); margin: 0 auto; background: #fff; border-radius: var(--rad); padding: 56px 52px; border: 1px solid var(--border); }
+
+    .legal-inner h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 2.1rem; font-weight: 600; color: var(--dark); margin-bottom: 32px; letter-spacing: -.025em; line-height: 1.15; }
+    .legal-inner h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.35rem; font-weight: 600; color: var(--dark); margin-top: 44px; margin-bottom: 16px; letter-spacing: -.015em; }
+    .legal-inner h3 { font-size: 1rem; font-weight: 700; color: var(--dark); margin-top: 28px; margin-bottom: 12px; letter-spacing: -.01em; }
+    .legal-inner h4 { font-size: .9rem; font-weight: 700; color: var(--accent); margin-top: 20px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: .06em; }
+    .legal-inner p { font-size: .93rem; color: var(--text); margin-bottom: 16px; line-height: 1.8; }
+    .legal-inner li { font-size: .93rem; color: var(--text); margin-bottom: 10px; margin-left: 24px; line-height: 1.75; }
+    .legal-inner ul { margin-bottom: 24px; }
+    .legal-inner table { width: 100%; border-collapse: collapse; margin: 24px 0; border-radius: 10px; overflow: hidden; }
+    .legal-inner th, .legal-inner td { border: 1px solid var(--border); padding: 12px 14px; text-align: left; font-size: .88rem; }
+    .legal-inner th { background: var(--gray); font-weight: 600; color: var(--dark); }
+    .legal-inner hr { margin: 48px 0; border: none; border-top: 1px solid var(--border); }
+    .legal-inner a { color: var(--accent); text-underline-offset: 3px; }
+
+    footer { border-top: 1px solid var(--border); padding: 40px 32px; background: var(--gray); }
+    .ft-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; }
+    .ft-logo img { height: 64px; width: auto; object-fit: contain; display: block; }
+    .ft-copy { font-size: .78rem; color: var(--muted); text-align: center; }
+    .ft-links { display: flex; gap: 24px; justify-content: flex-end; }
+    .ft-links a { font-size: .78rem; color: var(--muted); transition: color .15s; }
+    .ft-links a:hover { color: var(--text); }
+
+    .wa-float { position: fixed; bottom: 28px; right: 28px; width: 56px; height: 56px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 24px rgba(37,211,102,.35); z-index: 200; transition: transform .25s, box-shadow .25s; }
+    .wa-float:hover { transform: scale(1.1); box-shadow: 0 8px 32px rgba(37,211,102,.45); }
+    .wa-float svg { width: 28px; height: 28px; fill: #fff; }
+
+    @media (max-width: 980px) {
+      .nav-inner { padding: 0 24px; }
+      .legal-wrap { padding: 32px 24px 72px; }
     }
 
-    .nav-logo{flex-shrink:0;display:flex;align-items:center}
-    .nav-logo img{height:140px;width:auto;max-width:340px;object-fit:contain;display:block}
-
-    .nav-links{display:flex;gap:2px;flex:1;align-items:center}
-    .nav-links a{font-size:.9rem;font-weight:500;color:var(--muted);padding:7px 14px;border-radius:8px;transition:color .15s,background .15s;white-space:nowrap}
-    .nav-links a:hover,.nav-links a.active{color:var(--text);background:var(--gray)}
-
-    .nav-cta{display:flex;align-items:center;gap:10px;flex-shrink:0}
-    .btn-ol{font-size:.85rem;font-weight:600;padding:8px 18px;border-radius:50px;border:1.5px solid var(--border);color:var(--text);transition:border-color .15s,background .15s;white-space:nowrap}
-    .btn-ol:hover{border-color:#bbb;background:var(--gray)}
-    .btn-dk{font-size:.85rem;font-weight:600;padding:9px 20px;border-radius:50px;background:var(--dark);color:var(--white);transition:opacity .15s,transform .15s;white-space:nowrap}
-    .btn-dk:hover{opacity:.85;transform:translateY(-1px)}
-
-    .legal-wrap{background:var(--gray);padding:40px 28px 80px}
-    .legal-inner{max-width:var(--max-w);margin:0 auto;background:#fff;border-radius:var(--rad);padding:52px 48px}
-
-    .legal-inner h1{font-size:2rem;font-weight:700;color:var(--dark);margin-bottom:32px;letter-spacing:-0.025em}
-    .legal-inner h2{font-size:1.4rem;font-weight:700;color:var(--dark);margin-top:40px;margin-bottom:16px;letter-spacing:-0.015em}
-    .legal-inner h3{font-size:1.1rem;font-weight:600;color:var(--dark);margin-top:24px;margin-bottom:12px}
-    .legal-inner p{font-size:.95rem;color:var(--text);margin-bottom:16px;line-height:1.75}
-    .legal-inner li{font-size:.95rem;color:var(--text);margin-bottom:12px;margin-left:24px;line-height:1.75}
-    .legal-inner ul{margin-bottom:24px}
-    .legal-inner table{width:100%;border-collapse:collapse;margin:24px 0}
-    .legal-inner th,.legal-inner td{border:1px solid var(--border);padding:12px;text-align:left;font-size:.9rem}
-    .legal-inner th{background:var(--gray);font-weight:600}
-
-    footer{border-top:1px solid var(--border);padding:32px 28px}
-    .ft-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
-    .ft-logo img{height:140px;width:auto;max-width:340px;object-fit:contain;opacity:1;display:block}
-    .ft-copy{font-size:.8rem;color:var(--muted)}
-    .ft-links{display:flex;gap:20px}
-    .ft-links a{font-size:.8rem;color:var(--muted);transition:color .15s}
-    .ft-links a:hover{color:var(--text)}
-
-    .wa-float{position:fixed;bottom:24px;right:24px;width:52px;height:52px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.2);z-index:200;transition:transform .2s}
-    .wa-float:hover{transform:scale(1.08)}
-    .wa-float svg{width:28px;height:28px;fill:#fff}
-
-    @media(max-width:980px){
-      .nav-inner{flex-wrap:wrap;justify-content:center;gap:14px;height:auto;padding:12px 22px}
-      .nav-logo{width:100%;justify-content:center}
-      .nav-logo img{height:160px;max-width:380px}
-      .nav-links{width:100%;justify-content:center;flex-wrap:wrap;gap:6px}
-      .nav-cta{width:100%;justify-content:center;flex-wrap:wrap}
+    @media (max-width: 768px) {
+      .ft-inner { grid-template-columns: 1fr; text-align: center; gap: 16px; }
+      .ft-logo { display: flex; justify-content: center; }
+      .ft-links { justify-content: center; }
+      .legal-inner { padding: 40px 32px; }
     }
 
-    @media(max-width:640px){
-      .nav-inner{padding:10px 14px;gap:8px}
-      .nav-logo img{height:70px;max-width:180px}
-      .nav-links{display:flex;gap:6px}
-      .nav-links a{font-size:.82rem;padding:6px 10px}
-      .nav-cta{gap:8px}
-      .btn-ol,.btn-dk{font-size:.8rem;padding:8px 14px}
+    .chat-widget { position: fixed; bottom: 96px; right: 28px; width: 320px; background: #fff; border-radius: var(--rad); box-shadow: 0 12px 48px rgba(0,0,0,.16); z-index: 180; display: flex; flex-direction: column; max-height: 500px; overflow: hidden; border: 1px solid var(--border); }
+    .chat-header { background: #25D366; color: #fff; padding: 20px; border-radius: var(--rad) var(--rad) 0 0; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .chat-header-icon { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .chat-header-icon svg { width: 24px; height: 24px; fill: #fff; }
+    .chat-header-content h3 { font-size: .95rem; font-weight: 600; margin-bottom: 2px; }
+    .chat-header-content p { font-size: .78rem; opacity: .9; }
+    .chat-close { background: none; border: none; color: #fff; font-size: 1.1rem; cursor: pointer; padding: 0; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; margin-left: auto; flex-shrink: 0; border-radius: 50%; transition: background .15s; }
+    .chat-close:hover { background: rgba(255,255,255,.2); }
+    .chat-body { padding: 20px; flex: 1; overflow-y: auto; }
+    .chat-msg { margin-bottom: 16px; display: flex; gap: 12px; align-items: flex-start; }
+    .chat-msg-avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #fff; font-weight: 600; font-size: .85rem; }
+    .chat-msg-text { background: var(--gray); padding: 12px 14px; border-radius: 12px; font-size: .875rem; line-height: 1.55; max-width: 220px; color: var(--text); }
+    .chat-footer { padding: 16px; border-top: 1px solid var(--border); flex-shrink: 0; }
+    .chat-options { display: flex; flex-direction: column; gap: 8px; }
+    .chat-btn { display: flex; align-items: center; gap: 10px; padding: 11px 14px; background: var(--gray); border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: background .15s, border-color .15s, transform .15s; font-size: .85rem; font-weight: 500; color: var(--text); text-align: left; white-space: nowrap; }
+    .chat-btn:hover { background: var(--accent-light); border-color: var(--accent); transform: translateX(2px); }
+    .chat-btn svg { width: 17px; height: 17px; flex-shrink: 0; stroke: var(--accent); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 
-      .legal-wrap{padding:24px 16px 60px}
-      .legal-inner{padding:32px 24px}
-      .legal-inner h1{font-size:1.6rem;margin-bottom:24px}
-      .legal-inner h2{font-size:1.1rem;margin-top:32px}
-      .legal-inner h3{font-size:1rem}
+    @media (max-width: 640px) {
+      .chat-widget { width: calc(100% - 32px); right: 16px; bottom: 80px; max-height: 420px; }
+      .chat-msg-text { max-width: 100%; }
+      .nav-inner { padding: 12px 20px; height: auto; flex-wrap: wrap; justify-content: center; gap: 10px; }
+      .nav-logo { width: 100%; justify-content: center; }
+      .nav-logo img { height: 90px; max-width: 240px; }
+      .nav-links { width: 100%; justify-content: center; flex-wrap: wrap; gap: 4px; }
+      .nav-links a { font-size: .8rem; padding: 5px 10px; }
+      .nav-cta { width: 100%; justify-content: center; }
+      .btn-ol, .btn-dk { font-size: .8rem; padding: 8px 16px; }
 
-      .ft-inner{flex-direction:column;text-align:center;align-items:center}
-      .ft-logo img{height:70px;max-width:180px}
-      .ft-links{flex-direction:column;gap:8px}
+      .legal-wrap { padding: 24px 16px 60px; }
+      .legal-inner { padding: 32px 24px; }
+      .legal-inner h1 { font-size: 1.65rem; margin-bottom: 24px; }
+      .legal-inner h2 { font-size: 1.1rem; margin-top: 36px; }
 
-      .wa-float{width:48px;height:48px;right:16px;bottom:16px}
+      footer { padding: 32px 20px; }
+      .wa-float { width: 52px; height: 52px; bottom: 20px; right: 20px; }
     }
   </style>
 </head>
@@ -176,29 +187,29 @@
 
     <p>Este sitio web puede utilizar cookies técnicas (pequeños archivos de información que el servidor envía al ordenador de quien accede a la página) para llevar a cabo determinadas funciones que son consideradas imprescindibles para el correcto funcionamiento y visualización del sitio. Las cookies utilizadas tienen, en todo caso, carácter temporal, con la única finalidad de hacer más eficaz la navegación, y desaparecen al terminar la sesión del usuario. En ningún caso, estas cookies proporcionan por sí mismas datos de carácter personal y no se utilizarán para la recogida de los mismos.</p>
 
-    <p>Mediante el uso de cookies también es posible que el servidor donde se encuentra la web reconozca el navegador utilizado por el usuario con la finalidad de que la navegación sea más sencilla, permitiendo, por ejemplo, el acceso de los usuarios que se hayan registrado previamente a las áreas, servicios, promociones o concursos reservados exclusivamente a ellos sin tener que registrarse en cada visita. También se pueden utilizar para medir la audiencia, parámetros de tráfico, controlar el progreso y número de entradas, etc., siendo en estos casos cookies prescindibles técnicamente, pero beneficiosas para el usuario. Este sitio web no instalará cookies prescindibles sin el consentimiento previo del usuario.</p>
+    <p>Mediante el uso de cookies también es posible que el servidor donde se encuentra la web reconozca el navegador utilizado por el usuario con la finalidad de que la navegación sea más sencilla, permitiendo, por ejemplo, el acceso de los usuarios que se hayan registrado previamente a las áreas, servicios, promociones o concursos reservados exclusivamente a ellos sin tener que registrarse en cada visita. Este sitio web no instalará cookies prescindibles sin el consentimiento previo del usuario.</p>
 
     <p>El usuario tiene la posibilidad de configurar su navegador para ser alertado de la recepción de cookies y para impedir su instalación en su equipo. Por favor, consulte las instrucciones de su navegador para ampliar esta información.</p>
 
     <h3>Política de enlaces</h3>
 
-    <p>Desde el sitio web, es posible que se redirija a contenidos de terceros sitios web. Dado que el RESPONSABLE no puede controlar siempre los contenidos introducidos por terceros en sus respectivos sitios web, no asume ningún tipo de responsabilidad respecto a dichos contenidos. En todo caso, procederá a la retirada inmediata de cualquier contenido que pudiera contravenir la legislación nacional o internacional, la moral o el orden público, procediendo a la retirada inmediata de la redirección a dicho sitio web, poniendo en conocimiento de las autoridades competentes el contenido en cuestión.</p>
+    <p>Desde el sitio web, es posible que se redirija a contenidos de terceros sitios web. Dado que el RESPONSABLE no puede controlar siempre los contenidos introducidos por terceros en sus respectivos sitios web, no asume ningún tipo de responsabilidad respecto a dichos contenidos. En todo caso, procederá a la retirada inmediata de cualquier contenido que pudiera contravenir la legislación nacional o internacional, la moral o el orden público.</p>
 
-    <p>El RESPONSABLE no se hace responsable de la información y contenidos almacenados, a título enunciativo pero no limitativo, en foros, chats, generadores de blogs, comentarios, redes sociales o cualquier otro medio que permita a terceros publicar contenidos de forma independiente en la página web del RESPONSABLE. Sin embargo, y en cumplimiento de lo dispuesto en los artículos 11 y 16 de la LSSICE, se pone a disposición de todos los usuarios, autoridades y fuerzas de seguridad, colaborando de forma activa en la retirada o, en su caso, bloqueo de todos aquellos contenidos que puedan afectar o contravenir la legislación nacional o internacional, los derechos de terceros o la moral y el orden público. En caso de que el usuario considere que existe en el sitio web algún contenido que pudiera ser susceptible de esta clasificación, se ruega lo notifique de forma inmediata al administrador del sitio web.</p>
+    <p>El RESPONSABLE no se hace responsable de la información y contenidos almacenados, a título enunciativo pero no limitativo, en foros, chats, generadores de blogs, comentarios, redes sociales o cualquier otro medio que permita a terceros publicar contenidos de forma independiente en la página web del RESPONSABLE.</p>
 
     <p>Este sitio web se ha revisado y probado para que funcione correctamente. En principio, puede garantizarse el correcto funcionamiento los 365 días del año, 24 horas al día. Sin embargo, el RESPONSABLE no descarta la posibilidad de que existan ciertos errores de programación, o que acontezcan causas de fuerza mayor, catástrofes naturales, huelgas o circunstancias semejantes que hagan imposible el acceso a la página web.</p>
 
     <h3>Direcciones IP</h3>
 
-    <p>Los servidores del sitio web podrán detectar de manera automática la dirección IP y el nombre de dominio utilizados por el usuario. Una dirección IP es un número asignado automáticamente a un ordenador cuando este se conecta a Internet. Toda esta información se registra en un fichero de actividad del servidor que permite el posterior procesamiento de los datos con el fin de obtener mediciones únicamente estadísticas que permitan conocer el número de impresiones de páginas, el número de visitas realizadas a los servidores web, el orden de visitas, el punto de acceso, etc.</p>
+    <p>Los servidores del sitio web podrán detectar de manera automática la dirección IP y el nombre de dominio utilizados por el usuario. Una dirección IP es un número asignado automáticamente a un ordenador cuando este se conecta a Internet. Toda esta información se registra en un fichero de actividad del servidor que permite el posterior procesamiento de los datos con el fin de obtener mediciones únicamente estadísticas.</p>
 
     <h2>4. LEY APLICABLE Y JURISDICCIÓN</h2>
 
     <p>Para la resolución de todas las controversias o cuestiones relacionadas con el presente sitio web o de las actividades en él desarrolladas, será de aplicación la legislación española, a la que se someten expresamente las partes, siendo competentes para la resolución de todos los conflictos derivados o relacionados con su uso los Juzgados y Tribunales del domicilio del USUARIO o el lugar del cumplimiento de la obligación.</p>
 
-    <hr style="margin:40px 0;border:none;border-top:1px solid var(--border)">
+    <hr>
 
-    <h1 style="margin-top:40px">Política de Privacidad</h1>
+    <h1>Política de Privacidad</h1>
 
     <h2>1. INFORMACIÓN AL USUARIO</h2>
 
@@ -221,22 +232,20 @@
     <p>Para mantener una relación comercial con el usuario. Las operaciones previstas para realizar el tratamiento son:</p>
 
     <ul>
-      <li>Remisión de comunicaciones comerciales publicitarias por e-mail, fax, SMS, MMS, redes sociales o cualquier otro medio electrónico o físico, presente o futuro, que posibilite realizar comunicaciones comerciales. Estas comunicaciones serán realizadas por el RESPONSABLE y estarán relacionadas con sus productos y servicios, o de sus colaboradores o proveedores, con los que este haya alcanzado algún acuerdo de promoción. En este caso, los terceros nunca tendrán acceso a los datos personales.</li>
+      <li>Remisión de comunicaciones comerciales publicitarias por e-mail, fax, SMS, MMS, redes sociales o cualquier otro medio electrónico o físico, presente o futuro, que posibilite realizar comunicaciones comerciales.</li>
       <li>Realizar estudios de mercado y análisis estadísticos.</li>
       <li>Gestionar el contenido de redes sociales usadas con fines de promoción de la actividad.</li>
-      <li>Tramitar encargos, solicitudes, dar respuesta a las consultas o cualquier tipo de petición que sea realizada por el USUARIO a través de cualquiera de las formas de contacto que se ponen a su disposición en la página web del RESPONSABLE.</li>
+      <li>Tramitar encargos, solicitudes, dar respuesta a las consultas o cualquier tipo de petición que sea realizada por el USUARIO.</li>
       <li>Remitir boletines informativos online, sobre novedades, ofertas y promociones en nuestra actividad.</li>
     </ul>
 
     <h3>BASE DE LEGITIMACIÓN DE LOS TRATAMIENTOS DE DATOS</h3>
 
-    <p>Los tratamientos de datos realizados por el RESPONSABLE están legitimados por el artículo 6 del RGPD de la siguiente forma:</p>
-
     <ul>
       <li>Con el consentimiento del USUARIO: remisión de comunicaciones comerciales y del boletín informativo. (Art.6.1,a)</li>
       <li>Por ser necesario para la ejecución de un contrato en el que el titular es parte. (Art.6.1,b)</li>
       <li>Para el cumplimiento de obligaciones legales conferidas al Responsable. (Art.6.1,c)</li>
-      <li>Por interés legítimo del RESPONSABLE: realizar estudios de mercado, análisis estadísticos, etc. y tramitar encargos, solicitudes, etc. a petición del USUARIO. (Art.6.1,f)</li>
+      <li>Por interés legítimo del RESPONSABLE: realizar estudios de mercado, análisis estadísticos, etc. (Art.6.1,f)</li>
     </ul>
 
     <h3>PLAZOS DE CONSERVACIÓN:</h3>
@@ -245,11 +254,9 @@
 
     <h3>CESIONES DE DATOS:</h3>
 
-    <p>Esta entidad cuenta para los servicios externos en materia de protección de datos, con la entidad Eritia Privacidad S.L., que ejercerá las funciones definidas en el artículo 39 del RGPD. No está prevista ninguna otra comunicación o cesión de datos personales a terceros salvo, si fuese necesario para el desarrollo y ejecución de las finalidades del tratamiento, a nuestros proveedores de servicios relacionados con comunicaciones, con los cuales el RESPONSABLE tiene suscritos los contratos de confidencialidad y de encargado de tratamiento exigidos por la normativa vigente de privacidad.</p>
+    <p>Esta entidad cuenta para los servicios externos en materia de protección de datos, con la entidad Eritia Privacidad S.L., que ejercerá las funciones definidas en el artículo 39 del RGPD. No está prevista ninguna otra comunicación o cesión de datos personales a terceros salvo, si fuese necesario para el desarrollo y ejecución de las finalidades del tratamiento, a nuestros proveedores de servicios relacionados con comunicaciones.</p>
 
     <h3>EJERCICIO DE DERECHOS:</h3>
-
-    <p>Los derechos que asisten al USUARIO son:</p>
 
     <ul>
       <li>Derecho a retirar el consentimiento en cualquier momento.</li>
@@ -262,15 +269,11 @@
 
     <h2>2. CARÁCTER OBLIGATORIO O FACULTATIVO DE LA INFORMACIÓN FACILITADA POR EL USUARIO</h2>
 
-    <p>Los USUARIOS, mediante la marcación de las casillas correspondientes y la entrada de datos en los campos, marcados con un asterisco (*) en el formulario de contacto o presentados en formularios de descarga, aceptan expresamente y de forma libre e inequívoca, que sus datos son necesarios para atender su petición, por parte del prestador, siendo voluntaria la inclusión de datos en los campos restantes. El USUARIO garantiza que los datos personales facilitados al RESPONSABLE son veraces y se hace responsable de comunicar cualquier modificación de los mismos.</p>
-
-    <p>El RESPONSABLE informa de que todos los datos solicitados a través del sitio web son obligatorios, ya que son necesarios para la prestación de un servicio óptimo al USUARIO. En caso de que no se faciliten todos los datos, no se garantiza que la información y servicios facilitados sean completamente ajustados a sus necesidades.</p>
+    <p>Los USUARIOS, mediante la marcación de las casillas correspondientes y la entrada de datos en los campos, marcados con un asterisco (*) en el formulario de contacto o presentados en formularios de descarga, aceptan expresamente y de forma libre e inequívoca, que sus datos son necesarios para atender su petición, por parte del prestador, siendo voluntaria la inclusión de datos en los campos restantes.</p>
 
     <h2>3. MEDIDAS DE SEGURIDAD</h2>
 
-    <p>De conformidad con lo dispuesto en las normativas vigentes en protección de datos personales, el RESPONSABLE está cumpliendo con todas las disposiciones de las normativas RGPD y LOPDGDD para el tratamiento de los datos personales de su responsabilidad, y manifiestamente con los principios descritos en el artículo 5 del RGPD, por los cuales son tratados de manera lícita, leal y transparente en relación con el interesado y adecuados, pertinentes y limitados a lo necesario en relación con los fines para los que son tratados.</p>
-
-    <p>El RESPONSABLE garantiza que ha implementado políticas técnicas y organizativas apropiadas para aplicar las medidas de seguridad que establecen el RGPD y la LOPDGDD con el fin de proteger los derechos y libertades de los USUARIOS y les ha comunicado la información adecuada para que puedan ejercerlos.</p>
+    <p>De conformidad con lo dispuesto en las normativas vigentes en protección de datos personales, el RESPONSABLE está cumpliendo con todas las disposiciones de las normativas RGPD y LOPDGDD para el tratamiento de los datos personales de su responsabilidad, y manifiestamente con los principios descritos en el artículo 5 del RGPD.</p>
 
     <p>Para más información sobre las garantías de privacidad, puedes dirigirte al RESPONSABLE a través de MALVA MEDIACIÓN SERVICIOS INTEGRALES. CALLE ROSALÍA DE CASTRO, 53 1º B - 36450 SALVATERRA DE MIÑO (Pontevedra). E-mail: f@malvamediacion.com</p>
 
@@ -278,11 +281,9 @@
 
     <p>Malva Mediación, es responsable de las comunicaciones que realice desde su número de abonado a la aplicación WhatsApp y estas comunicaciones están amparadas por lo dispuesto en art. 6.1,f) del RGPD, (al existir un interés legítimo). Esta doctrina, ha sido puesta de manifiesto por la Agencia Española de Protección de Datos en el Procedimiento con número de referencia: E/01824/2019.</p>
 
-    <p>En cumplimiento de la misma normativa y de lo dispuesto en el artículo 5 del RGPD en cuanto a los principios de minimización y proporcionalidad, estas comunicaciones realizadas a través de la aplicación de mensajería WhatsApp, se realizarán de forma genérica, sin incorporar datos personales en las conversaciones que se mantengan, más allá de los identificadores de usuario, que usa la aplicación.</p>
+    <hr>
 
-    <hr style="margin:40px 0;border:none;border-top:1px solid var(--border)">
-
-    <h1 style="margin-top:40px">Información Sobre Cookies</h1>
+    <h1>Información Sobre Cookies</h1>
 
     <p>Conforme con la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico (LSSI), en relación con el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, General de Protección de Datos (RGPD), la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos y Garantía de los Derechos Digitales (LOPDGDD), es obligado obtener el consentimiento expreso del usuario de todas las páginas web que usan cookies prescindibles, antes de que este navegue por ellas.</p>
 
@@ -290,210 +291,74 @@
 
     <p>Las cookies y otras tecnologías similares tales como local shared objects, flash cookies o píxeles, son herramientas empleadas por los servidores Web para almacenar y recuperar información acerca de sus visitantes, así como para ofrecer un correcto funcionamiento del sitio.</p>
 
-    <p>Mediante el uso de estos dispositivos se permite al servidor Web recordar algunos datos concernientes al usuario, como sus preferencias para la visualización de las páginas de ese servidor, nombre y contraseña, productos que más le interesan, etc.</p>
-
-    <h2>COOKIES AFECTADAS POR LA NORMATIVA Y COOKIES EXCEPTUADAS</h2>
-
-    <p>Según la directiva de la UE, las cookies que requieren el consentimiento informado por parte del usuario son las cookies de analítica y las de publicidad y afiliación, quedando exceptuadas las de carácter técnico y las necesarias para el funcionamiento del sitio web o la prestación de servicios expresamente solicitados por el usuario.</p>
-
     <h2>TIPOS DE COOKIES</h2>
 
     <h3>SEGÚN LA FINALIDAD</h3>
 
     <ul>
       <li><strong>Cookies técnicas y funcionales:</strong> son aquellas que permiten al usuario la navegación a través de una página web, plataforma o aplicación y la utilización de las diferentes opciones o servicios que en ella existan.</li>
-      <li><strong>Cookies analíticas:</strong> son aquellas que permiten al responsable de las mismas el seguimiento y análisis del comportamiento de los usuarios de los sitios web a los que están vinculadas. La información recogida mediante este tipo de cookies se utiliza en la medición de la actividad de los sitios web, aplicación o plataforma y para la elaboración de perfiles de navegación de los usuarios de dichos sitios, aplicaciones y plataformas, con el fin de introducir mejoras en función del análisis de los datos de uso que hacen los usuarios del servicio.</li>
-      <li><strong>Cookies publicitarias:</strong> son aquellas que permiten la gestión, de la forma más eficaz posible, de los espacios publicitarios que, en su caso, el editor haya incluido en una página web, aplicación o plataforma desde la que presta el servicio solicitado en base a criterios como el contenido editado o la frecuencia en la que se muestran los anuncios.</li>
-      <li><strong>Cookies de publicidad comportamental:</strong> recogen información sobre las preferencias y elecciones personales del usuario (retargeting) para permitir la gestión, de la forma más eficaz posible, de los espacios publicitarios que, en su caso, el editor haya incluido en una página web, aplicación o plataforma desde la que presta el servicio solicitado.</li>
-      <li><strong>Cookies sociales:</strong> son establecidas por las plataformas de redes sociales en los servicios para permitirle compartir contenido con sus amigos y redes. Las plataformas de medios sociales tienen la capacidad de rastrear su actividad en línea fuera de los Servicios. Esto puede afectar al contenido y los mensajes que ve en otros servicios que visita.</li>
-      <li><strong>Cookies de afiliados:</strong> permiten hacer un seguimiento de las visitas procedentes de otras webs, con las que el sitio web establece un contrato de afiliación (empresas de afiliación).</li>
+      <li><strong>Cookies analíticas:</strong> son aquellas que permiten al responsable de las mismas el seguimiento y análisis del comportamiento de los usuarios de los sitios web a los que están vinculadas.</li>
+      <li><strong>Cookies publicitarias:</strong> son aquellas que permiten la gestión, de la forma más eficaz posible, de los espacios publicitarios que, en su caso, el editor haya incluido en una página web.</li>
+      <li><strong>Cookies de publicidad comportamental:</strong> recogen información sobre las preferencias y elecciones personales del usuario (retargeting).</li>
+      <li><strong>Cookies sociales:</strong> son establecidas por las plataformas de redes sociales en los servicios para permitirle compartir contenido con sus amigos y redes.</li>
+      <li><strong>Cookies de afiliados:</strong> permiten hacer un seguimiento de las visitas procedentes de otras webs, con las que el sitio web establece un contrato de afiliación.</li>
       <li><strong>Cookies de seguridad:</strong> almacenan información cifrada para evitar que los datos guardados en ellas sean vulnerables a ataques maliciosos de terceros.</li>
-    </ul>
-
-    <h3>SEGÚN LA PROPIEDAD</h3>
-
-    <ul>
-      <li><strong>Cookies propias:</strong> son aquellas que se envían al equipo terminal del usuario desde un equipo o dominio gestionado por el propio editor y desde el que se presta el servicio solicitado por el usuario.</li>
-      <li><strong>Cookies de terceros:</strong> son aquellas que se envían al equipo terminal del usuario desde un equipo o dominio que no es gestionado por el editor, sino por otra entidad que trata los datos obtenidos través de las cookies.</li>
     </ul>
 
     <h3>SEGÚN EL PLAZO DE CONSERVACIÓN</h3>
 
     <ul>
       <li><strong>Cookies de sesión:</strong> son un tipo de cookies diseñadas para recabar y almacenar datos mientras el usuario accede a una página web.</li>
-      <li><strong>Cookies persistentes:</strong> son un tipo de cookies en el que los datos siguen almacenados en el terminal y pueden ser accedidos y tratados durante un período definido por el responsable de la cookie, y que puede ir de unos minutos a varios años.</li>
+      <li><strong>Cookies persistentes:</strong> son un tipo de cookies en el que los datos siguen almacenados en el terminal y pueden ser accedidos y tratados durante un período definido por el responsable de la cookie.</li>
     </ul>
-
-    <h2>TRATAMIENTO DE DATOS PERSONALES</h2>
-
-    <p>MALVA MEDIACIÓN SERVICIOS INTEGRALES, es el Responsable del tratamiento de los datos personales del Interesado y le informa de que estos datos serán tratados de conformidad con lo dispuesto en el Reglamento (UE) 2016/679, de 27 de abril de 2016 (RGPD), por lo que se le facilita la siguiente información del tratamiento:</p>
-
-    <ul>
-      <li><strong>Fines del tratamiento:</strong> según se especifica en el apartado de cookies que se utilizan en este sitio web.</li>
-      <li><strong>Legitimación del tratamiento:</strong> salvo en los casos en los que resulte necesario para la navegación por la web, por consentimiento del interesado (art. 6.1.a RGPD).</li>
-      <li><strong>Criterios de conservación de los datos:</strong> según se especifica en el apartado de cookies utilizadas en la web.</li>
-      <li><strong>Comunicación de los datos:</strong> no se comunicarán los datos a terceros, excepto en cookies propiedad de terceros o por obligación legal.</li>
-    </ul>
-
-    <h3>Derechos que asisten al Interesado:</h3>
-
-    <ul>
-      <li>Derecho a retirar el consentimiento en cualquier momento.</li>
-      <li>Derecho de acceso, rectificación, portabilidad y supresión de sus datos, y de limitación u oposición a su tratamiento.</li>
-      <li>Derecho a presentar una reclamación ante la Autoridad de control (www.aepd.es) si considera que el tratamiento no se ajusta a la normativa vigente.</li>
-    </ul>
-
-    <h3>Datos de contacto para ejercer sus derechos:</h3>
-
-    <p>Nuestra entidad intentando implementar un mayor grado de responsabilidad en el cumplimiento normativo, ha externalizado el servicio de protección de Datos, a una entidad cuyo titular figura con certificado como Delegado de Protección de Datos por el Esquema de la Agencia Española de Protección de Datos, como garantía de ejecución de nuestra política de privacidad, que atenderán los derechos de los titulares en la siguiente dirección:</p>
-
-    <p><strong>Correo Postal:</strong> Eritia Privacidad S.L., calle Noria 2-3º D, 36940 Cangas (Pontevedra).<br>
-    <strong>E-mail:</strong> dpo@eritiaprivacidad.com.</p>
 
     <h2>COOKIES UTILIZADAS EN ESTE SITIO WEB</h2>
-
-    <h3>COOKIES CONTROLADAS POR EL EDITOR</h3>
 
     <h4>Técnicas y funcionales</h4>
 
     <table>
-      <tr>
-        <th>Propiedad</th>
-        <th>Cookie</th>
-        <th>Finalidad</th>
-        <th>Plazo</th>
-      </tr>
-      <tr>
-        <td>malvamediacion.com</td>
-        <td>_ga_QJ936J6KJ6</td>
-        <td>Cookie necesaria para la utilización de las opciones y servicios del sitio web</td>
-        <td>1 año</td>
-      </tr>
-      <tr>
-        <td>malvamediacion.com</td>
-        <td>bSession</td>
-        <td>Cookie necesaria para la utilización de las opciones y servicios del sitio web</td>
-        <td>Sesión</td>
-      </tr>
-      <tr>
-        <td>malvamediacion.com</td>
-        <td>consent-policy</td>
-        <td>Cookie necesaria para la utilización de las opciones y servicios del sitio web</td>
-        <td>1 año</td>
-      </tr>
-      <tr>
-        <td>malvamediacion.com</td>
-        <td>hs</td>
-        <td>Cookie necesaria para la utilización de las opciones y servicios del sitio web</td>
-        <td>Sesión</td>
-      </tr>
-      <tr>
-        <td>malvamediacion.com</td>
-        <td>server-session-bind</td>
-        <td>Cookie necesaria para la utilización de las opciones y servicios del sitio web</td>
-        <td>Sesión</td>
-      </tr>
-      <tr>
-        <td>malvamediacion.com</td>
-        <td>ssr-caching</td>
-        <td>Cookie necesaria para la utilización de las opciones y servicios del sitio web</td>
-        <td>Sesión</td>
-      </tr>
-      <tr>
-        <td>malvamediacion.com</td>
-        <td>svSession</td>
-        <td>Cookie necesaria para la utilización de las opciones y servicios del sitio web</td>
-        <td>1 año</td>
-      </tr>
-      <tr>
-        <td>malvamediacion.com</td>
-        <td>XSRF-TOKEN</td>
-        <td>Esta cookie se coloca para ayudar con la seguridad del sitio en la prevención de ataques entre sitios de falsificación de petición.</td>
-        <td>Sesión</td>
-      </tr>
+      <tr><th>Propiedad</th><th>Cookie</th><th>Finalidad</th><th>Plazo</th></tr>
+      <tr><td>malvamediacion.com</td><td>_ga_QJ936J6KJ6</td><td>Cookie necesaria para la utilización de las opciones y servicios del sitio web</td><td>1 año</td></tr>
+      <tr><td>malvamediacion.com</td><td>bSession</td><td>Cookie necesaria para la utilización de las opciones y servicios del sitio web</td><td>Sesión</td></tr>
+      <tr><td>malvamediacion.com</td><td>consent-policy</td><td>Cookie necesaria para la utilización de las opciones y servicios del sitio web</td><td>1 año</td></tr>
+      <tr><td>malvamediacion.com</td><td>XSRF-TOKEN</td><td>Esta cookie se coloca para ayudar con la seguridad del sitio en la prevención de ataques entre sitios de falsificación de petición.</td><td>Sesión</td></tr>
     </table>
 
     <h4>Analíticas</h4>
 
     <table>
-      <tr>
-        <th>Propiedad</th>
-        <th>Cookie</th>
-        <th>Finalidad</th>
-        <th>Plazo</th>
-      </tr>
-      <tr>
-        <td>Google Analytics</td>
-        <td>_ga</td>
-        <td>ID utiliza para identificar a los usuarios</td>
-        <td>1 año</td>
-      </tr>
+      <tr><th>Propiedad</th><th>Cookie</th><th>Finalidad</th><th>Plazo</th></tr>
+      <tr><td>Google Analytics</td><td>_ga</td><td>ID utiliza para identificar a los usuarios</td><td>1 año</td></tr>
     </table>
 
     <h4>Publicitarias</h4>
 
     <table>
-      <tr>
-        <th>Propiedad</th>
-        <th>Cookie</th>
-        <th>Finalidad</th>
-        <th>Plazo</th>
-      </tr>
-      <tr>
-        <td>Google</td>
-        <td>_gcl_au</td>
-        <td>Utilizado por Google AdSense para experimentar con la publicidad a través de la eficiencia de sitios web que utilizan sus servicios.</td>
-        <td>3 meses</td>
-      </tr>
+      <tr><th>Propiedad</th><th>Cookie</th><th>Finalidad</th><th>Plazo</th></tr>
+      <tr><td>Google</td><td>_gcl_au</td><td>Utilizado por Google AdSense para experimentar con la publicidad a través de la eficiencia de sitios web que utilizan sus servicios.</td><td>3 meses</td></tr>
     </table>
 
     <h2>COOKIES DE TERCEROS</h2>
 
     <p>Los servicios de terceros son ajenos al control del editor. Los proveedores pueden modificar en todo momento sus condiciones de servicio, finalidad y utilización de las cookies, etc.</p>
 
-    <p><strong>Proveedores externos de este sitio web:</strong></p>
-
     <table>
-      <tr>
-        <th>Editor</th>
-        <th>Política de privacidad</th>
-      </tr>
-      <tr>
-        <td>Google Analytics</td>
-        <td><a href="https://privacy.google.com/take-control.html" target="_blank" rel="noopener">https://privacy.google.com/take-control.html</a></td>
-      </tr>
-      <tr>
-        <td>Google</td>
-        <td><a href="https://privacy.google.com/take-control.html" target="_blank" rel="noopener">https://privacy.google.com/take-control.html</a></td>
-      </tr>
+      <tr><th>Editor</th><th>Política de privacidad</th></tr>
+      <tr><td>Google Analytics</td><td><a href="https://privacy.google.com/take-control.html" target="_blank" rel="noopener">https://privacy.google.com/take-control.html</a></td></tr>
+      <tr><td>Google</td><td><a href="https://privacy.google.com/take-control.html" target="_blank" rel="noopener">https://privacy.google.com/take-control.html</a></td></tr>
     </table>
 
     <h2>CÓMO GESTIONAR LAS COOKIES DESDE EL NAVEGADOR</h2>
 
-    <h3>Eliminar las cookies del dispositivo</h3>
-
-    <p>Las cookies que ya están en un dispositivo se pueden eliminar borrando el historial del navegador, con lo que se suprimen las cookies de todos los sitios web visitados. Sin embargo, también se puede perder parte de la información guardada (por ejemplo, los datos de inicio de sesión o las preferencias de sitio web).</p>
-
-    <h3>Gestionar las cookies específicas del sitio</h3>
-
-    <p>Para tener un control más preciso de las cookies específicas de cada sitio, los usuarios pueden ajustar su configuración de privacidad y cookies en el navegador.</p>
-
-    <h3>Bloquear las cookies</h3>
-
-    <p>Aunque la mayoría de los navegadores modernos se pueden configurar para evitar que se instalen cookies en los dispositivos, eso puede obligar al ajuste manual de determinadas preferencias cada vez que se visite un sitio o página. Además, algunos servicios y características pueden no funcionar correctamente (por ejemplo, los inicios de sesión con perfil).</p>
-
-    <h2>ELIMINAR LAS COOKIES DE LOS NAVEGADORES MÁS COMUNES</h2>
-
     <ul>
-      <li><strong>Chrome:</strong> <a href="http://support.google.com/chrome/answer/95647?hl=es" target="_blank" rel="noopener">http://support.google.com/chrome/answer/95647?hl=es</a></li>
-      <li><strong>Edge:</strong> <a href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-las-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener">https://support.microsoft.com/es-es/microsoft-edge/eliminar-las-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09</a></li>
-      <li><strong>Explorer:</strong> <a href="https://support.microsoft.com/es-es/help/278835/how-to-delete-cookie-files-in-internet-explorer" target="_blank" rel="noopener">https://support.microsoft.com/es-es/help/278835/how-to-delete-cookie-files-in-internet-explorer</a></li>
-      <li><strong>Firefox:</strong> <a href="https://www.mozilla.org/es-ES/privacy/websites/#cookies" target="_blank" rel="noopener">https://www.mozilla.org/es-ES/privacy/websites/#cookies</a></li>
-      <li><strong>Safari:</strong> <a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener">https://support.apple.com/es-es/guide/safari/sfri11471/mac</a></li>
-      <li><strong>Opera:</strong> <a href="https://help.opera.com/en/latest/security-and-privacy/#clearBrowsingData" target="_blank" rel="noopener">https://help.opera.com/en/latest/security-and-privacy/#clearBrowsingData</a></li>
+      <li><strong>Chrome:</strong> <a href="http://support.google.com/chrome/answer/95647?hl=es" target="_blank" rel="noopener">support.google.com/chrome</a></li>
+      <li><strong>Edge:</strong> <a href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-las-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener">support.microsoft.com/edge</a></li>
+      <li><strong>Firefox:</strong> <a href="https://www.mozilla.org/es-ES/privacy/websites/#cookies" target="_blank" rel="noopener">mozilla.org/privacy</a></li>
+      <li><strong>Safari:</strong> <a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener">support.apple.com/safari</a></li>
+      <li><strong>Opera:</strong> <a href="https://help.opera.com/en/latest/security-and-privacy/#clearBrowsingData" target="_blank" rel="noopener">help.opera.com</a></li>
     </ul>
 
-    <p style="margin-top:40px;font-size:.85rem;color:var(--muted)">Revisada con la herramienta web site Audit avalada por el Consejo Europeo para la protección de datos</p>
+    <p style="margin-top:40px;font-size:.82rem;color:var(--muted)">Revisada con la herramienta web site Audit avalada por el Consejo Europeo para la protección de datos.</p>
   </div>
 </div>
 
@@ -508,9 +373,41 @@
   </div>
 </footer>
 
-<a class="wa-float" href="https://api.whatsapp.com/send?phone=34621347352" target="_blank" rel="noopener" aria-label="WhatsApp">
+<div id="chatWidget" class="chat-widget" style="display:none">
+  <div class="chat-header">
+    <div class="chat-header-icon">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </div>
+    <div class="chat-header-content"><h3>¡Hola! 👋</h3><p>¿En qué podemos ayudarte?</p></div>
+    <button id="chatClose" class="chat-close">✕</button>
+  </div>
+  <div class="chat-body">
+    <div class="chat-msg">
+      <div class="chat-msg-avatar">M</div>
+      <div class="chat-msg-text">Somos Malva Mediación. Estamos disponibles en WhatsApp para resolver tus dudas sobre seguros, comunidades y energía.</div>
+    </div>
+  </div>
+  <div class="chat-footer">
+    <div class="chat-options">
+      <a href="https://api.whatsapp.com/send?phone=34621347352&text=Hola%20Malva%20Mediación%2C%20tengo%20una%20consulta%20sobre%20seguros" target="_blank" rel="noopener" class="chat-btn"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Sobre seguros</span></a>
+      <a href="https://api.whatsapp.com/send?phone=34621347352&text=Hola%20Malva%20Mediación%2C%20tengo%20una%20consulta%20sobre%20comunidades" target="_blank" rel="noopener" class="chat-btn"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg><span>Sobre comunidades</span></a>
+      <a href="https://api.whatsapp.com/send?phone=34621347352&text=Hola%20Malva%20Mediación%2C%20tengo%20una%20consulta%20sobre%20energía" target="_blank" rel="noopener" class="chat-btn"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg><span>Sobre energía</span></a>
+      <a href="https://api.whatsapp.com/send?phone=34621347352" target="_blank" rel="noopener" class="chat-btn"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><span>Consulta general</span></a>
+    </div>
+  </div>
+</div>
+
+<button id="chatToggle" class="wa-float" aria-label="Abrir chat WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
+</button>
+
+<script>
+  const chatToggle = document.getElementById('chatToggle');
+  const chatWidget = document.getElementById('chatWidget');
+  const chatClose  = document.getElementById('chatClose');
+  chatToggle.addEventListener('click', () => { chatWidget.style.display = chatWidget.style.display === 'none' ? 'flex' : 'none'; });
+  chatClose.addEventListener('click', () => { chatWidget.style.display = 'none'; });
+</script>
 
 </body>
 </html>
