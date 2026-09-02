@@ -88,17 +88,32 @@
     }
     form button:hover { background: var(--dark2); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,.18); }
 
+    .map-sec { background: var(--gray); border-top: 1px solid var(--border); padding: 72px 32px; }
+    .map-inner { max-width: var(--max-w); margin: 0 auto; }
+    .map-frame {
+      border-radius: var(--rad-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+      aspect-ratio: 16 / 7;
+      background: var(--border);
+    }
+    .map-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+
     @media (max-width: 1000px) {
       .contact-cards { grid-template-columns: 1fr 1fr; }
       form { grid-template-columns: 1fr; }
       textarea { min-height: 200px; }
       .contact-hero { padding: 48px 24px; }
       .form-sec { padding: 64px 24px; }
+      .map-sec { padding: 56px 24px; }
     }
     @media (max-width: 720px) {
       .contact-cards { grid-template-columns: 1fr; }
       .contact-hero { padding: 40px 16px; }
       .form-sec { padding: 56px 20px; }
+      .map-sec { padding: 48px 16px; }
+      .map-frame { aspect-ratio: 4 / 5; }
     }
   </style>
 </head>
@@ -210,6 +225,25 @@
         <button type="submit">Enviar mensaje</button>
       </div>
     </form>
+  </section>
+
+  <section class="map-sec" aria-labelledby="map-h">
+    <div class="map-inner">
+      <p class="sec-lbl" style="justify-content:center;">Dónde estamos</p>
+      <h2 class="sec-ttl" id="map-h" style="max-width:none;text-align:center;">Malva Mediación</h2>
+      <p style="text-align:center;color:var(--muted);margin-bottom:32px;">Calle Rosalía de Castro, 53 1º B · 36450 Salvaterra de Miño (Pontevedra)</p>
+      <div class="map-frame">
+        <iframe
+          title="Mapa de la ubicación de Malva Mediación en Salvaterra de Miño"
+          src="https://www.google.com/maps?q=Calle%20Rosal%C3%ADa%20de%20Castro%2053%2C%2036450%20Salvaterra%20de%20Mi%C3%B1o%2C%20Pontevedra&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+      <p style="text-align:center;margin-top:16px;">
+        <a class="svc-lnk" style="display:inline-flex;" href="https://www.google.com/maps/dir/?api=1&destination=Calle%20Rosal%C3%ADa%20de%20Castro%2053%2C%2036450%20Salvaterra%20de%20Mi%C3%B1o%2C%20Pontevedra" target="_blank" rel="noopener">Cómo llegar <span aria-hidden="true">&rarr;</span></a>
+      </p>
+    </div>
   </section>
 
 </main>
