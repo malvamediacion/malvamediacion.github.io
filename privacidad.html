@@ -5,146 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Aviso Legal y Política de Privacidad | Malva Mediación</title>
   <meta name="description" content="Aviso legal y política de privacidad de Malva Mediación. Información sobre el tratamiento de datos personales y cookies."/>
+  <link rel="canonical" href="https://www.malvamediacion.com/privacidad.html"/>
+  <meta name="robots" content="noindex, follow"/>
   <link rel="icon" type="image/png" href="assets/logo_malva.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="assets/styles.css"/>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --accent:       #6B4F7A;
-      --accent-light: #f3eef7;
-      --dark:         #141414;
-      --dark2:        #2c2c2c;
-      --gray:         #f7f6f8;
-      --text:         #1a1a1a;
-      --muted:        #6b6b6b;
-      --border:       #e6e0ec;
-      --white:        #ffffff;
-      --max-w:        1100px;
-      --rad:          16px;
-    }
-
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', system-ui, sans-serif; background: var(--white); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; height: auto; }
-
-    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.93); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
-    .nav-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 32px; height: 130px; display: flex; align-items: center; gap: 32px; }
-    .nav-logo { flex-shrink: 0; display: flex; align-items: center; }
-    .nav-logo img { height: 114px; width: auto; max-width: 300px; object-fit: contain; display: block; }
-    .nav-links { display: flex; gap: 2px; flex: 1; align-items: center; }
-    .nav-links a { font-size: .875rem; font-weight: 500; color: var(--muted); padding: 6px 14px; border-radius: 8px; transition: color .15s, background .15s; white-space: nowrap; }
-    .nav-links a:hover, .nav-links a.active { color: var(--text); background: var(--gray); }
-    .nav-cta { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
-    .btn-ol { font-size: .84rem; font-weight: 500; padding: 8px 18px; border-radius: 50px; border: 1.5px solid var(--border); color: var(--muted); transition: border-color .2s, color .2s, background .2s; white-space: nowrap; }
-    .btn-ol:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-light); }
-    .btn-dk { font-size: .84rem; font-weight: 600; padding: 9px 22px; border-radius: 50px; background: var(--dark); color: var(--white); transition: transform .2s, box-shadow .2s; white-space: nowrap; }
-    .btn-dk:hover { background: var(--dark2); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,.16); }
-
-    .legal-wrap { background: var(--gray); padding: 48px 32px 96px; }
-    .legal-inner { max-width: var(--max-w); margin: 0 auto; background: #fff; border-radius: var(--rad); padding: 56px 52px; border: 1px solid var(--border); }
-
+    /* Estilos específicos de la página legal */
+    .legal-wrap { background: var(--gray); padding: 48px 32px 88px; }
+    .legal-inner { max-width: 820px; margin: 0 auto; background: #fff; border-radius: var(--rad); padding: 56px 52px; border: 1px solid var(--border); }
     .legal-inner h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 2.1rem; font-weight: 600; color: var(--dark); margin-bottom: 32px; letter-spacing: -.025em; line-height: 1.15; }
     .legal-inner h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.35rem; font-weight: 600; color: var(--dark); margin-top: 44px; margin-bottom: 16px; letter-spacing: -.015em; }
     .legal-inner h3 { font-size: 1rem; font-weight: 700; color: var(--dark); margin-top: 28px; margin-bottom: 12px; letter-spacing: -.01em; }
-    .legal-inner h4 { font-size: .9rem; font-weight: 700; color: var(--accent); margin-top: 20px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: .06em; }
-    .legal-inner p { font-size: .93rem; color: var(--text); margin-bottom: 16px; line-height: 1.8; }
-    .legal-inner li { font-size: .93rem; color: var(--text); margin-bottom: 10px; margin-left: 24px; line-height: 1.75; }
+    .legal-inner h4 { font-size: .9rem; font-weight: 700; color: var(--accent-dark); margin-top: 20px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: .06em; }
+    .legal-inner p { font-size: .95rem; color: var(--text); margin-bottom: 16px; line-height: 1.8; }
+    .legal-inner li { font-size: .95rem; color: var(--text); margin-bottom: 10px; margin-left: 24px; line-height: 1.75; }
     .legal-inner ul { margin-bottom: 24px; }
-    .legal-inner table { width: 100%; border-collapse: collapse; margin: 24px 0; border-radius: 10px; overflow: hidden; }
+    .legal-inner .table-scroll { overflow-x: auto; margin: 24px 0; }
+    .legal-inner table { width: 100%; border-collapse: collapse; min-width: 480px; }
     .legal-inner th, .legal-inner td { border: 1px solid var(--border); padding: 12px 14px; text-align: left; font-size: .88rem; }
-    .legal-inner th { background: var(--gray); font-weight: 600; color: var(--dark); }
+    .legal-inner th { background: var(--gray); font-weight: 700; color: var(--dark); }
     .legal-inner hr { margin: 48px 0; border: none; border-top: 1px solid var(--border); }
-    .legal-inner a { color: var(--accent); text-underline-offset: 3px; }
-
-    footer { border-top: 1px solid var(--border); padding: 40px 32px; background: var(--gray); }
-    .ft-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; }
-    .ft-logo img { height: 64px; width: auto; object-fit: contain; display: block; }
-    .ft-copy { font-size: .78rem; color: var(--muted); text-align: center; }
-    .ft-links { display: flex; gap: 24px; justify-content: flex-end; }
-    .ft-links a { font-size: .78rem; color: var(--muted); transition: color .15s; }
-    .ft-links a:hover { color: var(--text); }
-
-    .wa-float { position: fixed; bottom: 28px; right: 28px; width: 56px; height: 56px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 24px rgba(37,211,102,.35); z-index: 200; transition: transform .25s, box-shadow .25s; }
-    .wa-float:hover { transform: scale(1.1); box-shadow: 0 8px 32px rgba(37,211,102,.45); }
-    .wa-float svg { width: 28px; height: 28px; fill: #fff; }
-
-    @media (max-width: 980px) {
-      .nav-inner { padding: 0 24px; }
-      .legal-wrap { padding: 32px 24px 72px; }
-    }
-
-    @media (max-width: 768px) {
-      .ft-inner { grid-template-columns: 1fr; text-align: center; gap: 16px; }
-      .ft-logo { display: flex; justify-content: center; }
-      .ft-links { justify-content: center; }
-      .legal-inner { padding: 40px 32px; }
-    }
-
-    .chat-widget { position: fixed; bottom: 96px; right: 28px; width: 320px; background: #fff; border-radius: var(--rad); box-shadow: 0 12px 48px rgba(0,0,0,.16); z-index: 180; display: flex; flex-direction: column; max-height: 500px; overflow: hidden; border: 1px solid var(--border); }
-    .chat-header { background: #25D366; color: #fff; padding: 20px; border-radius: var(--rad) var(--rad) 0 0; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
-    .chat-header-icon { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .chat-header-icon svg { width: 24px; height: 24px; fill: #fff; }
-    .chat-header-content h3 { font-size: .95rem; font-weight: 600; margin-bottom: 2px; }
-    .chat-header-content p { font-size: .78rem; opacity: .9; }
-    .chat-close { background: none; border: none; color: #fff; font-size: 1.1rem; cursor: pointer; padding: 0; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; margin-left: auto; flex-shrink: 0; border-radius: 50%; transition: background .15s; }
-    .chat-close:hover { background: rgba(255,255,255,.2); }
-    .chat-body { padding: 20px; flex: 1; overflow-y: auto; }
-    .chat-msg { margin-bottom: 16px; display: flex; gap: 12px; align-items: flex-start; }
-    .chat-msg-avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #fff; font-weight: 600; font-size: .85rem; }
-    .chat-msg-text { background: var(--gray); padding: 12px 14px; border-radius: 12px; font-size: .875rem; line-height: 1.55; max-width: 220px; color: var(--text); }
-    .chat-footer { padding: 16px; border-top: 1px solid var(--border); flex-shrink: 0; }
-    .chat-options { display: flex; flex-direction: column; gap: 8px; }
-    .chat-btn { display: flex; align-items: center; gap: 10px; padding: 11px 14px; background: var(--gray); border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: background .15s, border-color .15s, transform .15s; font-size: .85rem; font-weight: 500; color: var(--text); text-align: left; white-space: nowrap; }
-    .chat-btn:hover { background: var(--accent-light); border-color: var(--accent); transform: translateX(2px); }
-    .chat-btn svg { width: 17px; height: 17px; flex-shrink: 0; stroke: var(--accent); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-
-    @media (max-width: 640px) {
-      .chat-widget { width: calc(100% - 32px); right: 16px; bottom: 80px; max-height: 420px; }
-      .chat-msg-text { max-width: 100%; }
-      .nav-inner { padding: 12px 20px; height: auto; flex-wrap: wrap; justify-content: center; gap: 10px; }
-      .nav-logo { width: 100%; justify-content: center; }
-      .nav-logo img { height: 90px; max-width: 240px; }
-      .nav-links { width: 100%; justify-content: center; flex-wrap: wrap; gap: 4px; }
-      .nav-links a { font-size: .8rem; padding: 5px 10px; }
-      .nav-cta { width: 100%; justify-content: center; }
-      .btn-ol, .btn-dk { font-size: .8rem; padding: 8px 16px; }
-
-      .legal-wrap { padding: 24px 16px 60px; }
-      .legal-inner { padding: 32px 24px; }
-      .legal-inner h1 { font-size: 1.65rem; margin-bottom: 24px; }
+    .legal-inner a { color: var(--accent-dark); text-decoration: underline; text-underline-offset: 3px; }
+    @media (max-width: 1000px) { .legal-wrap { padding: 32px 24px 64px; } }
+    @media (max-width: 720px) {
+      .legal-wrap { padding: 24px 16px 56px; }
+      .legal-inner { padding: 32px 22px; }
+      .legal-inner h1 { font-size: 1.6rem; margin-bottom: 24px; }
       .legal-inner h2 { font-size: 1.1rem; margin-top: 36px; }
-
-      footer { padding: 32px 20px; }
-      .wa-float { width: 52px; height: 52px; bottom: 20px; right: 20px; }
     }
   </style>
 </head>
 <body>
 
-<nav>
+<a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+<nav aria-label="Navegación principal">
   <div class="nav-inner">
-    <a class="nav-logo" href="index.html"><img src="assets/logo_malva.png" alt="Malva Mediación"/></a>
-    <div class="nav-links">
+    <a class="nav-logo" href="index.html"><img src="assets/logo_malva.png" alt="Malva Mediación · Inicio"/></a>
+    <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú de navegación">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="nav-links" id="navLinks">
       <a href="index.html">Inicio</a>
-      <a href="seguros.html">Seguros</a>
+      <a href="seguros.html" class="priority">Seguros</a>
       <a href="comunidades.html">Comunidades</a>
+      <a href="rehabilitacion.html" class="priority">Rehabilitación</a>
+      <a href="inmobiliario.html">Inmobiliario</a>
       <a href="energia.html">Energía</a>
       <a href="contacto.html">Contacto</a>
     </div>
     <div class="nav-cta">
       <a class="btn-ol" href="tel:+34621347352">621 347 352</a>
-      <a class="btn-dk" href="contacto.html">Consulta gratuita →</a>
+      <a class="btn-dk" href="contacto.html">Consulta gratuita</a>
     </div>
   </div>
 </nav>
 
-<div class="legal-wrap">
-  <div class="legal-inner">
+<main id="main" class="legal-wrap">
+  <article class="legal-inner">
     <h1>Aviso Legal</h1>
 
     <h2>LEY DE LOS SERVICIOS DE LA SOCIEDAD DE LA INFORMACIÓN (LSSI)</h2>
@@ -316,37 +237,49 @@
 
     <h4>Técnicas y funcionales</h4>
 
-    <table>
-      <tr><th>Propiedad</th><th>Cookie</th><th>Finalidad</th><th>Plazo</th></tr>
-      <tr><td>malvamediacion.com</td><td>_ga_QJ936J6KJ6</td><td>Cookie necesaria para la utilización de las opciones y servicios del sitio web</td><td>1 año</td></tr>
-      <tr><td>malvamediacion.com</td><td>bSession</td><td>Cookie necesaria para la utilización de las opciones y servicios del sitio web</td><td>Sesión</td></tr>
-      <tr><td>malvamediacion.com</td><td>consent-policy</td><td>Cookie necesaria para la utilización de las opciones y servicios del sitio web</td><td>1 año</td></tr>
-      <tr><td>malvamediacion.com</td><td>XSRF-TOKEN</td><td>Esta cookie se coloca para ayudar con la seguridad del sitio en la prevención de ataques entre sitios de falsificación de petición.</td><td>Sesión</td></tr>
-    </table>
+    <div class="table-scroll">
+      <table>
+        <caption class="visually-hidden">Cookies técnicas y funcionales utilizadas en este sitio web</caption>
+        <tr><th scope="col">Propiedad</th><th scope="col">Cookie</th><th scope="col">Finalidad</th><th scope="col">Plazo</th></tr>
+        <tr><td>malvamediacion.com</td><td>_ga_QJ936J6KJ6</td><td>Cookie necesaria para la utilización de las opciones y servicios del sitio web</td><td>1 año</td></tr>
+        <tr><td>malvamediacion.com</td><td>bSession</td><td>Cookie necesaria para la utilización de las opciones y servicios del sitio web</td><td>Sesión</td></tr>
+        <tr><td>malvamediacion.com</td><td>consent-policy</td><td>Cookie necesaria para la utilización de las opciones y servicios del sitio web</td><td>1 año</td></tr>
+        <tr><td>malvamediacion.com</td><td>XSRF-TOKEN</td><td>Esta cookie se coloca para ayudar con la seguridad del sitio en la prevención de ataques entre sitios de falsificación de petición.</td><td>Sesión</td></tr>
+      </table>
+    </div>
 
     <h4>Analíticas</h4>
 
-    <table>
-      <tr><th>Propiedad</th><th>Cookie</th><th>Finalidad</th><th>Plazo</th></tr>
-      <tr><td>Google Analytics</td><td>_ga</td><td>ID utiliza para identificar a los usuarios</td><td>1 año</td></tr>
-    </table>
+    <div class="table-scroll">
+      <table>
+        <caption class="visually-hidden">Cookies analíticas utilizadas en este sitio web</caption>
+        <tr><th scope="col">Propiedad</th><th scope="col">Cookie</th><th scope="col">Finalidad</th><th scope="col">Plazo</th></tr>
+        <tr><td>Google Analytics</td><td>_ga</td><td>ID utiliza para identificar a los usuarios</td><td>1 año</td></tr>
+      </table>
+    </div>
 
     <h4>Publicitarias</h4>
 
-    <table>
-      <tr><th>Propiedad</th><th>Cookie</th><th>Finalidad</th><th>Plazo</th></tr>
-      <tr><td>Google</td><td>_gcl_au</td><td>Utilizado por Google AdSense para experimentar con la publicidad a través de la eficiencia de sitios web que utilizan sus servicios.</td><td>3 meses</td></tr>
-    </table>
+    <div class="table-scroll">
+      <table>
+        <caption class="visually-hidden">Cookies publicitarias utilizadas en este sitio web</caption>
+        <tr><th scope="col">Propiedad</th><th scope="col">Cookie</th><th scope="col">Finalidad</th><th scope="col">Plazo</th></tr>
+        <tr><td>Google</td><td>_gcl_au</td><td>Utilizado por Google AdSense para experimentar con la publicidad a través de la eficiencia de sitios web que utilizan sus servicios.</td><td>3 meses</td></tr>
+      </table>
+    </div>
 
     <h2>COOKIES DE TERCEROS</h2>
 
     <p>Los servicios de terceros son ajenos al control del editor. Los proveedores pueden modificar en todo momento sus condiciones de servicio, finalidad y utilización de las cookies, etc.</p>
 
-    <table>
-      <tr><th>Editor</th><th>Política de privacidad</th></tr>
-      <tr><td>Google Analytics</td><td><a href="https://privacy.google.com/take-control.html" target="_blank" rel="noopener">https://privacy.google.com/take-control.html</a></td></tr>
-      <tr><td>Google</td><td><a href="https://privacy.google.com/take-control.html" target="_blank" rel="noopener">https://privacy.google.com/take-control.html</a></td></tr>
-    </table>
+    <div class="table-scroll">
+      <table>
+        <caption class="visually-hidden">Enlaces a las políticas de privacidad de terceros</caption>
+        <tr><th scope="col">Editor</th><th scope="col">Política de privacidad</th></tr>
+        <tr><td>Google Analytics</td><td><a href="https://privacy.google.com/take-control.html" target="_blank" rel="noopener">https://privacy.google.com/take-control.html</a></td></tr>
+        <tr><td>Google</td><td><a href="https://privacy.google.com/take-control.html" target="_blank" rel="noopener">https://privacy.google.com/take-control.html</a></td></tr>
+      </table>
+    </div>
 
     <h2>CÓMO GESTIONAR LAS COOKIES DESDE EL NAVEGADOR</h2>
 
@@ -359,55 +292,62 @@
     </ul>
 
     <p style="margin-top:40px;font-size:.82rem;color:var(--muted)">Revisada con la herramienta web site Audit avalada por el Consejo Europeo para la protección de datos.</p>
-  </div>
-</div>
+  </article>
+</main>
 
 <footer>
   <div class="ft-inner">
     <div class="ft-logo"><img src="assets/logo_malva.png" alt="Malva Mediación"/></div>
     <p class="ft-copy">© 2025 MALVA MEDIACIÓN CORREDURÍA DE SEGUROS SL</p>
-    <div class="ft-links">
+    <nav class="ft-links" aria-label="Enlaces legales">
       <a href="privacidad.html">Aviso legal</a>
       <a href="privacidad.html">Política de privacidad</a>
-    </div>
+    </nav>
   </div>
 </footer>
 
-<div id="chatWidget" class="chat-widget" style="display:none">
+<div id="chatWidget" class="chat-widget" role="dialog" aria-label="Chat de WhatsApp con Malva Mediación" hidden>
   <div class="chat-header">
-    <div class="chat-header-icon">
-      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <div class="chat-header-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
     </div>
-    <div class="chat-header-content"><h3>¡Hola! 👋</h3><p>¿En qué podemos ayudarte?</p></div>
-    <button id="chatClose" class="chat-close">✕</button>
+    <div class="chat-header-content"><h2>¡Hola! 👋</h2><p>¿En qué podemos ayudarte?</p></div>
+    <button id="chatClose" class="chat-close" aria-label="Cerrar chat">✕</button>
   </div>
   <div class="chat-body">
     <div class="chat-msg">
-      <div class="chat-msg-avatar">M</div>
-      <div class="chat-msg-text">Somos Malva Mediación. Estamos disponibles en WhatsApp para resolver tus dudas sobre seguros, comunidades y energía.</div>
+      <div class="chat-msg-avatar" aria-hidden="true">M</div>
+      <p class="chat-msg-text">Somos Malva Mediación. Estamos disponibles en WhatsApp para resolver tus dudas sobre seguros, comunidades y rehabilitación de edificios.</p>
     </div>
   </div>
   <div class="chat-footer">
     <div class="chat-options">
-      <a href="https://api.whatsapp.com/send?phone=34621347352&text=Hola%20Malva%20Mediación%2C%20tengo%20una%20consulta%20sobre%20seguros" target="_blank" rel="noopener" class="chat-btn"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Sobre seguros</span></a>
-      <a href="https://api.whatsapp.com/send?phone=34621347352&text=Hola%20Malva%20Mediación%2C%20tengo%20una%20consulta%20sobre%20comunidades" target="_blank" rel="noopener" class="chat-btn"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg><span>Sobre comunidades</span></a>
-      <a href="https://api.whatsapp.com/send?phone=34621347352&text=Hola%20Malva%20Mediación%2C%20tengo%20una%20consulta%20sobre%20energía" target="_blank" rel="noopener" class="chat-btn"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg><span>Sobre energía</span></a>
-      <a href="https://api.whatsapp.com/send?phone=34621347352" target="_blank" rel="noopener" class="chat-btn"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><span>Consulta general</span></a>
+      <a href="https://api.whatsapp.com/send?phone=34621347352&text=Hola%20Malva%20Mediación%2C%20tengo%20una%20consulta%20sobre%20seguros" target="_blank" rel="noopener" class="chat-btn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Sobre seguros</span></a>
+      <a href="https://api.whatsapp.com/send?phone=34621347352&text=Hola%20Malva%20Mediación%2C%20tengo%20una%20consulta%20sobre%20comunidades" target="_blank" rel="noopener" class="chat-btn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Sobre comunidades</span></a>
+      <a href="https://api.whatsapp.com/send?phone=34621347352&text=Hola%20Malva%20Mediación%2C%20tengo%20una%20consulta%20sobre%20rehabilitación" target="_blank" rel="noopener" class="chat-btn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 9h.01M15 9h.01"/></svg><span>Sobre rehabilitación</span></a>
+      <a href="https://api.whatsapp.com/send?phone=34621347352" target="_blank" rel="noopener" class="chat-btn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Consulta general</span></a>
     </div>
   </div>
 </div>
 
-<button id="chatToggle" class="wa-float" aria-label="Abrir chat WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<button id="chatToggle" class="wa-float" aria-expanded="false" aria-controls="chatWidget" aria-label="Abrir chat de WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
 </button>
 
-<script>
-  const chatToggle = document.getElementById('chatToggle');
-  const chatWidget = document.getElementById('chatWidget');
-  const chatClose  = document.getElementById('chatClose');
-  chatToggle.addEventListener('click', () => { chatWidget.style.display = chatWidget.style.display === 'none' ? 'flex' : 'none'; });
-  chatClose.addEventListener('click', () => { chatWidget.style.display = 'none'; });
-</script>
+<div id="cookieBanner" class="cookie-banner" role="region" aria-label="Aviso de cookies" hidden>
+  <div class="cookie-inner">
+    <div class="cookie-text">
+      <p>Utilizamos cookies para mejorar tu experiencia en nuestro sitio. Al continuar navegando, aceptas el uso de cookies. Lee nuestra <a href="privacidad.html">política de privacidad</a> para más información.</p>
+    </div>
+    <div class="cookie-actions">
+      <button id="cookieReject" class="cookie-btn cookie-reject">Rechazar</button>
+      <button id="cookieAccept" class="cookie-btn cookie-accept">Aceptar</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/site.js"></script>
+<script src="assets/cookies.js"></script>
 
 </body>
 </html>
